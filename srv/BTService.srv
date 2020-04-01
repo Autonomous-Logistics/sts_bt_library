@@ -1,0 +1,3 @@
+bool goal #Request (Tick)
+---
+int32 result #Response (1 Success, 2 Failure)
