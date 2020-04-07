@@ -295,7 +295,7 @@ List of used data fields for .graphml for edges:
 
 Using the parser inside the code should be straightforward:
 
-```
+```c++
 BT::TreeNode* rootPtr = sts_behavior_tree::BehaviorTree::Load(path, nh);
 ```
 
@@ -306,7 +306,7 @@ BT::TreeNode* rootPtr = sts_behavior_tree::BehaviorTree::Load(path, nh);
 
 
 ##### From Scratch (Code)
-```
+```c++
 	//Build nodes here
 	StsBtIfNodePtr action1 = sts_bt_if_factory::createNode("/sts_behavior_tree_testing_node/bt_action", 
 		false, sts_bt_if_factory::ACTION, nodeHandle, false);
@@ -345,7 +345,7 @@ The nodes interacting with ros are a little bit more complicated:
 #### Starting Trees
 The tree starts with the ```Execute()``` call and will run forwever. It takes a ```TreeNode*``` pointer to the root of your tree and executes from there.
 
-```
+```c++
 try
 {
 	sts_behavior_tree::BehaviorTree::Execute(this->rootPtr, 
